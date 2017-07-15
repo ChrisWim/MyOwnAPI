@@ -10,12 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/{name?}', 'MyController@index');
-/*Route::get('/', 'WelcomeController@index');
+Route::resource('makers', 'MakerController', ['except' => ['create', 'edit']]);
+Route::resource('vehicles', 'VehicleController', ['only' => ['index']]);
 
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);*/
+Route::resource('makers.vehicles', 'MakerVehicleController' , ['except' => ['edit', 'create']]);
