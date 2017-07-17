@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"maker",
+				"$makerId〔variable〕"
+			],
+			[
 				"for",
 				"foreach\tforeach …"
 			],
@@ -16,28 +20,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/MyModel.php",
-			"settings":
-			{
-				"buffer_size": 223,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/routes.php",
-			"settings":
-			{
-				"buffer_size": 644,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/Http/Controllers/VehicleController.php",
 			"settings":
 			{
-				"buffer_size": 311,
+				"buffer_size": 387,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -46,7 +32,7 @@
 			"file": "app/Http/Controllers/MakerController.php",
 			"settings":
 			{
-				"buffer_size": 846,
+				"buffer_size": 2270,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -55,47 +41,80 @@
 			"file": "app/Http/Controllers/MakerVehiclesController.php",
 			"settings":
 			{
-				"buffer_size": 872,
+				"buffer_size": 3120,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/Vehicle.php",
+			"file": ".env",
 			"settings":
 			{
-				"buffer_size": 371,
+				"buffer_size": 175,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "database/seeds/MakersSeed.php",
-			"settings":
-			{
-				"buffer_size": 419,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php namespace App;\n\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Maker extends Model\n{\n\tprotected $table = 'makers';\n\n\tprotected $fillable = ['name', 'phone'];\n\n\tprotected $hidden = ['id', 'created_at', 'updated_at'];\n\n\tpublic function vehicles()\n\t{\n\t\treturn $this->hasMany('App\\Vehicle');\n\t}\n}",
-			"file": "app/Maker.php",
-			"file_size": 310,
-			"file_write_time": 131446081547217269,
-			"settings":
-			{
-				"buffer_size": 298,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
-			"settings":
-			{
-				"buffer_size": 78543,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/User.php",
+			"settings":
+			{
+				"buffer_size": 774,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "database/migrations/2017_07_16_114122_create_users.php",
+			"settings":
+			{
+				"buffer_size": 526,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/laravel/framework/src/Illuminate/Auth/Middleware/AuthenticateWithBasicAuth.php",
+			"settings":
+			{
+				"buffer_size": 685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Middleware/OnceAuth.php",
+			"settings":
+			{
+				"buffer_size": 807,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Http/Kernel.php",
+			"settings":
+			{
+				"buffer_size": 896,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "database/seeds/DatabaseSeeder.php",
+			"settings":
+			{
+				"buffer_size": 437,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "database/seeds/UsersSeed.php",
+			"settings":
+			{
+				"buffer_size": 338,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -142,10 +161,11 @@
 	[
 		"/C/Xampp2/htdocs/MyOwnAPI",
 		"/C/Xampp2/htdocs/MyOwnAPI/app",
-		"/C/Xampp2/htdocs/MyOwnAPI/app/Handlers/Commands",
 		"/C/Xampp2/htdocs/MyOwnAPI/app/Http",
 		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/Controllers",
-		"/C/Xampp2/htdocs/MyOwnAPI/database",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/Controllers/Auth",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/Middleware",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/Requests",
 		"/C/Xampp2/htdocs/MyOwnAPI/database/migrations",
 		"/C/Xampp2/htdocs/MyOwnAPI/database/seeds",
 		"/C/Xampp2/htdocs/MyOwnAPI/resources",
@@ -153,10 +173,22 @@
 	],
 	"file_history":
 	[
+		"/C/Xampp2/htdocs/attack.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/Requests/Request.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/Requests/CreateMakerRequest.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/Requests/CreateVehicleRequest.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/routes.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/database/migrations/2017_07_15_160753_vehicles_table.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Maker.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Vehicle.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/database/seeds/MakersSeed.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/Kernel.php",
+		"/C/Xampp2/htdocs/MyOwnAPI/app/MyModel.php",
 		"/C/Xampp2/htdocs/MyOwnAPI/database/seeds/VehiclesSeed.php",
 		"/C/Xampp2/htdocs/MyOwnAPI/database/seeds/DatabaseSeeder.php",
 		"/C/Xampp2/htdocs/MyOwnAPI/database/migrations/2017_07_15_160656_makers_table.php",
-		"/C/Xampp2/htdocs/MyOwnAPI/database/migrations/2017_07_15_160753_vehicles_table.php",
 		"/C/Xampp2/htdocs/MyOwnAPI/app/Http/Controllers/MyController.php",
 		"/C/Xampp2/htdocs/MyOwnAPI/.env",
 		"/C/Xampp2/htdocs/MyOwnAPI/resources/views/hi.blade.php",
@@ -234,6 +266,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"maker",
+			"power",
+			"phone",
+			"name",
+			"makers",
 			"title",
 			"question",
 			"password",
@@ -264,60 +301,31 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/MyModel.php",
+					"file": "app/Http/Controllers/VehicleController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 223,
+						"buffer_size": 387,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								223,
-								223
+								98,
+								98
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"open_with_edit": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/Http/routes.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 644,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								644,
-								644
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -327,20 +335,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/Http/Controllers/VehicleController.php",
+					"buffer": 1,
+					"file": "app/Http/Controllers/MakerController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 311,
+						"buffer_size": 2270,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								304,
-								280
+								319,
+								319
 							]
 						],
 						"settings":
@@ -357,20 +365,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/Http/Controllers/MakerController.php",
+					"buffer": 2,
+					"file": "app/Http/Controllers/MakerVehiclesController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 846,
+						"buffer_size": 3120,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								288,
-								288
+								684,
+								684
 							]
 						],
 						"settings":
@@ -387,20 +395,48 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/Http/Controllers/MakerVehiclesController.php",
+					"buffer": 3,
+					"file": ".env",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 872,
+						"buffer_size": 175,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								445,
-								445
+								174,
+								174
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 774,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								770,
+								770
 							]
 						],
 						"settings":
@@ -410,49 +446,49 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 60.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "app/Vehicle.php",
+					"file": "database/migrations/2017_07_16_114122_create_users.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 371,
+						"buffer_size": 526,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								358,
-								358
+								134,
+								134
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"open_with_edit": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "database/seeds/MakersSeed.php",
+					"file": "vendor/laravel/framework/src/Illuminate/Auth/Middleware/AuthenticateWithBasicAuth.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 419,
+						"buffer_size": 685,
 						"regions":
 						{
 						},
@@ -460,13 +496,11 @@
 						[
 							[
 								0,
-								419
+								685
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"open_with_edit": true,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -479,61 +513,124 @@
 				},
 				{
 					"buffer": 7,
-					"file": "app/Maker.php",
+					"file": "app/Http/Middleware/OnceAuth.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 298,
+						"buffer_size": 807,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								283,
-								283
+								807,
+								807
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"open_with_edit": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 419.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+					"file": "app/Http/Kernel.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 78543,
+						"buffer_size": 896,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1789,
-								1799
+								853,
+								838
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 960.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "database/seeds/DatabaseSeeder.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								433,
+								433
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "database/seeds/UsersSeed.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -587,6 +684,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"authenticatewithbasicauth",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\AuthenticateWithBasicAuth.php"
+			],
 			[
 				"model",
 				"vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php"
